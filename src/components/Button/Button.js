@@ -26,7 +26,6 @@ Button.propTypes = { // mais peut pomper des resources.
   // donc il vaut mieux mettre ces propTypes dans un fichier externes
   // pour les inclure uniquement en dev/ tests et pas en orid
   // avec des inclusions conditionnels
-  text: PropTypes.string.isRequired,
   bgColor: PropTypes.string.isRequired,
   onClick: PropTypes.func
 };
