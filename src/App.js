@@ -11,9 +11,16 @@ function App() {
   return (
     <div className="App">
       <div className="benjContainers">
-        <Button text="YOLO" onClick={benjButtonClick}/>
-        <Button text="YATTA" bgColor="orange"/>
-        <Button text="YEN" bgColor="skyblue"/>
+        <Button onClick={benjButtonClick}>
+          <img src="img/logo.svg" alt="react logo"/>
+          YOLO
+        </Button>
+        <Button bgColor="orange">
+          YATTA
+        </Button>
+        <Button bgColor="skyblue">
+          YEN
+        </Button>
       </div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
