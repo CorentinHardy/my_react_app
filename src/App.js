@@ -4,11 +4,17 @@ import './App.css';
 import Button from './components/Button/Button';
 
 function App() {
+  function benjButtonClick(params) {
+    console.log('benj click: ', params);
+  }
+
   return (
     <div className="App">
-      <Button text="YOLO"/>
-      <Button text="YATTA" icon="4"/>
-      <Button />
+      <div className="benjContainers">
+        <Button text="YOLO" onClick={benjButtonClick}/>
+        <Button text="YATTA" bgColor="orange"/>
+        <Button text="YEN" bgColor="skyblue"/>
+      </div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

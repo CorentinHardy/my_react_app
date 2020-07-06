@@ -1,1 +1,24 @@
-.Button {}
+.Button {
+  margin: 3px;
+  border: solid 2px #61dafb;
+  $buttonHeight: 80px;
+  height: $buttonHeight;
+  border-radius: 30px;
+
+  >span {
+    display: inline-block;
+    $margin: 8px;
+    width: $buttonHeight - 2*$margin;
+    margin: $buttonHeight/4+$margin $margin;
+    padding: 2px;
+    color: white;
+    // background-color: #282c34;
+    border: solid 1px #61dafb;
+    border-radius: 10px;
+
+    transition: transform 2s;
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+}
