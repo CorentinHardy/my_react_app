@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Button from './components/Button/Button';
-import NicknameForm from './components/NicknameForm/NicknameForm';
+import Button from '../UIComponents/Button/Button';
+import NicknameForm from '../FeatureComponents/NicknameForm/NicknameForm';
 
 // function App() {
 // wee pass this class as Component, to provide nickname to the form
@@ -45,8 +45,8 @@ class App extends Component {
       </div>
       Bonjour {this.state.nickname}
       <NicknameForm nickname={this.state.nickname} validatedNickname={e => this.setState({nickname: e.result})}/>
-      {/* here it is 2 * one-way binding */}
     </div>
+    /* it is 2 * one-way binding to access NicknameForm */
     return (
       <div className="App">
         {/* header */}

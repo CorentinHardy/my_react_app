@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './NicknameForm.module.scss';
-import Button from '../Button/Button';
+import Button from '../../UIComponents/Button/Button';
 
 class NicknameForm extends Component {
 
