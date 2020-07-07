@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Button from '../UIComponents/Button/Button';
 import NicknameForm from '../FeatureComponents/NicknameForm/NicknameForm';
+import Tchat from '../FeatureComponents/Tchat/Tchat';
 
 // function App() {
 // wee pass this class as Component, to provide nickname to the form
@@ -43,8 +44,8 @@ class App extends Component {
         <Button bgColor="orange">YATTA</Button>
         <Button bgColor="skyblue">YEN</Button>
       </div>
-      Bonjour {this.state.nickname}
       <NicknameForm nickname={this.state.nickname} validatedNickname={e => this.setState({nickname: e.result})}/>
+      <Tchat nickname={this.state.nickname}/>
     </div>
     /* it is 2 * one-way binding to access NicknameForm */
     return (

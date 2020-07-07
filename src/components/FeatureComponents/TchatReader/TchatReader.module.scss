@@ -1,0 +1,49 @@
+.TchatReader {
+  background-color: lightgray;
+  margin: 30px;
+  border-radius: 30px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .TchatMessage {
+    background-color: #282c34;
+    margin: 10px 30px;
+    position: relative;
+    width: 45%;
+    height: 63px;
+    border: solid 2px #181a1f;
+    border-radius: 30px;
+
+    .author {
+      position: absolute;
+      top: 0px;
+      left: 11px;
+      color: lightgrey;
+      font-size: small;
+    }
+
+    .time {
+      position: absolute;
+      top: 0px;
+      right: 11px;
+      color: lightgrey;
+      font-size: small;
+    }
+
+    .content {
+      display: block;
+      max-height: 63px;
+      padding: 15px 10px;
+    }
+
+    &.right {
+      align-self: end;
+      background-color: #192846;
+      > .author {
+        display: none;
+      }
+    }
+  }
+}

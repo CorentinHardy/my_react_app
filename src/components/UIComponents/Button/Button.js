@@ -4,7 +4,7 @@ import styles from './Button.module.scss';
 
 const Button = (props) => {
   // props: { children?: ReactNode, text?: string, onClick?: React.MouseEvent<HTMLDivElement, MouseEvent> }
-  console.log(`Benj Button: ${props.text}`, props);
+  // console.log(`Benj Button: ${props.text}`, props);
   const bindOnclick = (event) => {
     // we put a small animation:
     const target = event.currentTarget;

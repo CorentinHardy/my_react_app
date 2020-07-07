@@ -10,7 +10,7 @@
     display: inline-block;
     $margin: 8px;
     width: $buttonHeight - 2*$margin;
-    margin: $buttonHeight/4+$margin $margin;
+    margin: $buttonHeight/4+$margin $margin 0 $margin;
     padding: 2px;
     color: white;
     // background-color: #282c34; done in js
