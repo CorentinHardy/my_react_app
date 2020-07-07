@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-// import Button from './components/Button/Button';
+import Button from './components/Button/Button';
 import NicknameForm from './components/NicknameForm/NicknameForm';
 
 // function App() {
@@ -15,41 +15,42 @@ class App extends Component {
     };
   }
 
-  // benjButtonClick = (params) => {
-  //   console.log('benj click: ', params);
-  // }
+  benjButtonClick = (params) => {
+    console.log('benj click: ', params);
+  }
+
   render() {
+    const header = <header className="App-header">
+      <img src={logo} className="App-logo" alt="logo" />
+      <p>
+        Edit <code>src/App.js</code> and save to reload.
+      </p>
+      <a
+        className="App-link"
+        href="https://reactjs.org"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Learn React
+      </a>
+    </header>;
+    const body = <div className="App-body"> 
+      <div className="benjContainers">
+        <Button onClick={this.benjButtonClick}>
+          <img src="img/logo.svg" alt="react logo"/>
+          YOLO
+        </Button>
+        <Button bgColor="orange">YATTA</Button>
+        <Button bgColor="skyblue">YEN</Button>
+      </div>
+      Bonjour {this.state.nickname}
+      <NicknameForm nickname={this.state.nickname} validatedNickname={e => this.setState({nickname: e.result})}/>
+      {/* here it is 2 * one-way binding */}
+    </div>
     return (
       <div className="App">
-        {/* <div className="benjContainers">
-          <Button onClick={this.benjButtonClick}>
-            <img src="img/logo.svg" alt="react logo"/>
-            YOLO
-          </Button>
-          <Button bgColor="orange">
-            YATTA
-          </Button>
-          <Button bgColor="skyblue">
-            YEN
-          </Button>
-        </div> */}
-        Bonjour {this.state.nickname}
-        <NicknameForm nickname={this.state.nickname} validatedNickname={e => this.setState({nickname: e.result})}/>
-        {/* here it is 2 * one-way binding */}
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        {/* header */}
+        {body}
       </div>
     );
   }
